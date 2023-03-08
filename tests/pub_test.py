@@ -6,7 +6,7 @@ class TestPub(unittest.TestCase):
     
     def setUp(self):
         self.pub = Pub("The Caley Sample Room", 1000.00)
-        self.tennents = Drink("Tennent's", 3.80)
+        self.tennents = Drink("Tennent's", 3.80, 3)
 
     def test_has_name(self):
         self.assertEqual("The Caley Sample Room", self.pub.name)
@@ -32,3 +32,5 @@ class TestPub(unittest.TestCase):
         expected = None
         actual = self.pub.find_drink_by_name("Tennent's")
         self.assertEqual(expected, actual)
+
+    
